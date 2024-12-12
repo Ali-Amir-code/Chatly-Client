@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatly</title>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div id="contactButtonContainer">
+                <button id="addContactBtn">Add Contact</button>
+            </div>
+            <div id="contacts">
+                <button class="contact hideBadge" onclick="showMessages('contact2')">
+                    <img src="../img/unread-msg-badge.png" alt="" class="msgBadge">
+                    <div class="name">Jane Doe</div>
+                    <div class="status">Status: </div>
+                    <div class="username">@janedoe</div>
+                </button>
+            </div>
+        </div>
+
+        <div class="main">
+            <div id="userInfoContainer" class="">
+                <div id="notificationContainer">
+                    <h2>Notifications</h2>
+                    <!-- <div class="notification">
+                        <h3 class="notificationHead">Friend Request</h3>
+                        <div class="notificationBody">
+                            <p class="content">Jane Doe sent you a friend request</p>
+                            <div class="buttons">
+                                <button class="accept">Accept</button>
+                                <button class="decline">Decline</button>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- <div class="notification">
+                        <h3 class="notificationHead">Friend Request</h3>
+                        <div class="notificationBody">
+                            <p class="content">Jane Doe accepted your friend request</p>
+                            <div class="buttons">
+                                <button class="accept">ok</button>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <div id="messageScreen" class="hidden">
+            <div id="messageScreenHeader">
+                <h2></h2>
+                <button id="closeMessageScreen" onclick="closeMessageScreen()">&times;</button>
+            </div>
+            <div id="messages">
+            </div>
+            <div id="messageInputContainer">
+                <input type="text" id="messageInput" placeholder="Type a message...">
+                <button id="sendMessageBtn">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Contact Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Add New Contact</h2>
+            <label for="contactID">ID:</label>
+            <input type="text" id="contactID">
+            <div id="contactModalInfoBox"></div>
+            <button id="addContact">Add Contact</button>
+        </div>
+    </div>
+
+    <div id="infoBox">
+        <p id="info">This is some info to keep you informed</p>
+    </div>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

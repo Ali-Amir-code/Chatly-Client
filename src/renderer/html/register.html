@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up for Chatly</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to Chatly</h1>
+        <form id="registerForm">
+            <h2>Let's sign you up!</h2>
+            <div class="input-container">
+                <label for="username">Name:*</label>
+                <input type="text" name="name" id="name" placeholder="Type you name here" required autofocus>
+            </div>
+            <div class="input-container">
+                <label for="username">Username:*</label>
+                <input type="text" name="username" id="username" placeholder="Type a username here" required>
+                <div id="usernameInfo">
+                    <svg id="loader" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="20" height="20">
+                        <circle cx="50" cy="50" r="35" stroke="#fff" stroke-width="10" fill="none"
+                        stroke-dasharray="220" stroke-dashoffset="0">
+                        <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50"
+                        dur="1s" repeatCount="indefinite" />
+                        <animate attributeName="stroke-dashoffset" values="220;110;220" dur="1s"
+                        repeatCount="indefinite" />
+                    </circle>
+                </svg>
+                <p></p>
+                </div>
+            </div>
+            <div class="input-container">
+                <label for="password">Password:*</label>
+                <input type="password" name="password" id="password" placeholder="Type your password here" required>
+            </div>
+            <div class="input-container">
+                <label for="confirmPassword">Confirm Password:*</label>
+                <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm your password" required>
+                <div id="passwordInfo">
+                    <p></p>
+                </div>
+            </div>
+            <div class="button-container">
+                <button id="submitButton" type="submit" disabled>Sign Up</button>
+            </div>
+        </form>
+        <div id="oldUser">
+            <p>Already have an account? <a href="login.html">Log In</a></p>
+        </div>
+    </div>
+    <script src="../js/register.js"></script>
+</body>
+
+</html>

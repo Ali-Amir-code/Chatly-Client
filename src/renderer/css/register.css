@@ -1,0 +1,100 @@
+.container {
+    position: relative;
+    width: 400px;
+    min-height: 400px;
+    text-align: center;
+    border: 1px solid var(--primary-color);
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 18px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: var(--text-color);
+}
+
+.button-container {
+    margin: auto;
+}
+
+.container h1{
+    font-size: 2.2rem;
+}
+
+.container h2{
+}
+
+.input-container {
+    margin-bottom: 10px;
+}
+
+.input-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+    float: left;
+    margin: 3px 20px;
+    font-size: 1.3rem;
+}
+
+.input-container input {
+    width: 85%;
+    padding: 10px;
+    border: 1px solid var(--primary-color);
+    border-radius: 7px;
+    background: transparent;
+    color: var(--text-color);
+    box-shadow: 1px 1px 2px 1px var(--secondary-color);
+}
+
+.input-container input:focus {
+    outline: none;
+    border: 2px solid var(--primary-color);
+    transition: .1s;
+}
+
+.input-container input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.input-container #usernameInfo{
+    font-size: .9rem;
+    margin: 3px 20px;
+
+}
+
+.input-container #usernameInfo p{
+    display: inline;
+}
+
+.input-container #usernameInfo #loader{
+    display: none;
+}
+
+.button-container button {
+    font-size: 1.04rem;
+    height: 45px;
+    border-radius: 7px;
+    background: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--primary-color);
+    box-shadow: 1px 1px 2px 1px var(--secondary-color);
+}
+
+.button-container button:hover {
+    background: var(--primary-color);
+    transition: .5s ease-out;
+    cursor: pointer;
+}
+
+#oldUser a{
+    color : var(--text-color);
+}
+
+#oldUser a:visited{
+    color: var(--text-color);
+}
+
+#oldUser a:hover{
+color: var(--primary-color);
+}

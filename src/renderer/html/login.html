@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to Chatly</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Chatly</h1>
+        <form id="loginForm">
+            <h2>Let's log you in</h2>
+            <div class="input-container">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" placeholder="Type your username here" autofocus>
+            </div>
+            <div class="input-container">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Type your password here">
+            </div>
+            <div id="info">
+                <p></p>
+            </div>
+            <div class="button-container">
+                <button type="submit">Log In</button>
+            </div>
+        </form>
+        <div id="newUser">
+            <p>Don't have an account? <a href="register.html">Sign Up</a></p>
+        </div>
+    </div>
+    <script src="../js/login.js"></script>
+</body>
+</html>
