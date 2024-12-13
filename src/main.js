@@ -1,10 +1,12 @@
+require('update-electron-app')();
+
 const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('node:path');
 const fs = require('node:fs/promises');
 const io = require('socket.io-client');
 
-// const serverURL = 'https://chatly-server.glitch.me';
-const serverURL = 'http://localhost:3000';
+const serverURL = 'https://chatly-server.glitch.me';
+// const serverURL = 'http://localhost:3000';
 
 let socket = null;
 
@@ -142,6 +144,8 @@ const createWindow = async () => {
         webPreferences: {
             preload: path.join(__dirname, 'preload.js'),
         },
+        autoHideMenuBar: true,
+        icon: path.join(__dirname, '../assets/icon.png')
     });
 
     try {

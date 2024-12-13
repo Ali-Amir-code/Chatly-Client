@@ -11,8 +11,8 @@ const loader = document.getElementById('loader');
 
 const formSubmitButton = document.getElementById('submitButton');
 
-// const serverURL = 'https://chatly-server.glitch.me';
-const serverURL = 'http://localhost:3000';
+const serverURL = 'https://chatly-server.glitch.me';
+// const serverURL = 'http://localhost:3000';
 
 let controller = null;
 let isUsernameAvailable = false;

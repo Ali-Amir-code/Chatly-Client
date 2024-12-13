@@ -2,14 +2,29 @@ const { FusesPlugin } = require('@electron-forge/plugin-fuses');
 const { FuseV1Options, FuseVersion } = require('@electron/fuses');
 
 module.exports = {
+  publishers: [
+    {
+      name: '@electron-forge/publisher-github',
+      config: {
+        repository: {
+          owner: 'Ali-Amir-code',
+          name: 'Chatly-Client'
+        },
+        prerelease: false,
+        draft: true
+      }
+    }
+  ],
   packagerConfig: {
     asar: true,
+    icon: '/assets/icon',
   },
   rebuildConfig: {},
   makers: [
     {
       name: '@electron-forge/maker-squirrel',
-      config: {},
+      config: {
+      },
     },
     {
       name: '@electron-forge/maker-zip',
@@ -17,7 +32,11 @@ module.exports = {
     },
     {
       name: '@electron-forge/maker-deb',
-      config: {},
+      config: {
+        options: {
+          icon: '/assets/icon.png',
+        }
+      },
     },
     {
       name: '@electron-forge/maker-rpm',
